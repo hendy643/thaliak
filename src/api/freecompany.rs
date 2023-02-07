@@ -2,17 +2,15 @@ pub mod profile {
     use actix_web::{get, web};
 
     use crate::api::err_no_id::ErrNoId;
-    use crate::lodestone::structs::profile::LodestoneProfile;
     use crate::lodestone::Lodestone;
+    use crate::lodestone::structs::freecompany::LodestoneFreeCompany;
 
-    #[get("/profile/{lodestone_id}")]
-    pub async fn get_profile_by_id(
+    #[get("/freecompany/{lodestone_id}")]
+    pub async fn get_free_company_by_id(
         lodestone_id: web::Path<u64>,
-    ) -> Result<LodestoneProfile, ErrNoId> {
+    ) -> Result<LodestoneFreeCompany, ErrNoId> {
         let lodestone = Lodestone::new();
-        let profile = lodestone
-            .get_profile(lodestone_id.to_string().parse().unwrap())
-            .await;
+        let profile = lodestone.get_free_company(lodestone_id.to_owned()).await;
 
         if profile.id > 0 {
             Ok(profile)

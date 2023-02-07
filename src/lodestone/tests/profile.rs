@@ -8,26 +8,23 @@ mod profile_tests {
         let lodestone = Lodestone::new();
         let lodestone_profile = lodestone.get_profile(21568996).await;
         assert_eq!(
-            lodestone_profile.name,
-            "Wompus Senekane",
+            lodestone_profile.name, "Wompus Senekane",
             "profile name does not match"
         );
+        assert_eq!(lodestone_profile.id, 21568996, "profile id does not match");
         assert_eq!(
-            lodestone_profile.id,
-            21568996,
-            "profile id does not match"
-        );
-        assert_eq!(
-            lodestone_profile.clan,
-            "Seeker of the Sun",
+            lodestone_profile.clan, "Seeker of the Sun",
             "profile clan does not match"
         );
         assert_eq!(
-            lodestone_profile.free_company,
-            "The British Empire",
+            lodestone_profile.free_company, "The British Empire",
             "free company does not match"
         );
-
-        println!("{}", lodestone_profile);
+        assert_eq!(
+            lodestone_profile.grand_company.get("gc_name").unwrap(),
+            "Immortal Flames",
+            "Grand Company does not match"
+        );
+        println!("lodestone_profile: {}", lodestone_profile.to_string())
     }
 }
