@@ -1,0 +1,9 @@
+pub(crate) static PROFILE_NAME_SELECTOR: &str = "div.frame__chara__box:nth-child(2) > .frame__chara__name";
+pub(crate) static PROFILE_NAMEDAY_SELECTOR: &str = ".character-block__birth";
+pub(crate) static PROFILE_FC_NAME_SELECTOR: &str = ".character__freecompany__name > h4:nth-child(2) > a:nth-child(1)";
+pub(crate) static PROFILE_BIO_SELECTOR: &str = ".character__selfintroduction";
+pub(crate) static PROFILE_GC_NAME_SELECTOR: &str = "div.character-block:nth-child(4) > div:nth-child(2) > p:nth-child(2)";
+pub(crate) static PROFILE_DEITY_SELECTOR: &str = "p.character-block__name:nth-child(4)";
+pub(crate) static PROFILE_TITLE_SELECTOR: &str = ".frame__chara__title";
+pub(crate) static PROFILE_RACE_CLAN_GENDER_SELECTOR: &str = "div.character-block:nth-child(1) > div:nth-child(2) > p:nth-child(2)";
+pub(crate) static PROFILE_RACE_CLAN_GENDER_REGEX: &str = "(.+)<br>(.+) / (.+)";
