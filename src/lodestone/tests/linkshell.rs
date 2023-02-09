@@ -8,6 +8,8 @@ mod profile_tests {
         let lodestone = Lodestone::new();
         let lodestone_linkshell = lodestone.get_linkshell(10977524091770589).await;
 
+        assert_eq!(lodestone_linkshell.id, 10977524091770589, "linkshell id does not match");
+
         assert_eq!(
             lodestone_linkshell.name, "The Falling Snow",
             "linkshell name does not match"

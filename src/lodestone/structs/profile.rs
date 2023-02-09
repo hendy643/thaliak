@@ -19,6 +19,7 @@ pub struct LodestoneProfile {
     pub grand_company: HashMap<String, String>,
     pub bio: Vec<String>,
     pub deity: String,
+    pub url: String
 }
 
 impl Display for LodestoneProfile {

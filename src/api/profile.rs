@@ -1,4 +1,4 @@
-pub mod profile {
+pub(crate) mod profile {
     use actix_web::{get, web};
 
     use crate::api::err_no_id::ErrNoId;
