@@ -1,7 +1,6 @@
-pub mod profile {
+pub mod freecompany {
     use actix_web::{get, web};
-
-    use crate::api::err_no_id::ErrNoId;
+    use crate::api::endpoints::err_no_id::ErrNoId;
     use crate::lodestone::Lodestone;
     use crate::lodestone::structs::freecompany::LodestoneFreeCompany;
 

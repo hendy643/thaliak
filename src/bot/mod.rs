@@ -23,8 +23,8 @@ impl DiscordBot {
     }
 
     pub async fn start(&self) -> Result<(), Box<dyn std::error::Error>> {
-        let token = env!("DISCORD_TOKEN");
-        let application_id = env!("DISCORD_APP_ID");
+        let token = env!("THALIAK_TOKEN");
+        let application_id = env!("THALIAK_APP_ID");
         let application_id = application_id.parse::<u64>()?;
 
         let mut client =
@@ -49,7 +49,7 @@ impl EventHandler for Handler {
     }
 
     async fn ready(&self, ctx: Context, _: Ready) {
-        let guild_id = env!("OWNER_GUILD").parse::<u64>().unwrap();
+        let guild_id = env!("THALIAK_OWNER_GUILD_ID").parse::<u64>().unwrap();
         Command::register_commands_in_guild(&ctx, GuildId(guild_id)).await.unwrap();
     }
 

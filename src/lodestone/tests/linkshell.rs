@@ -14,6 +14,6 @@ mod profile_tests {
             lodestone_linkshell.name, "The Falling Snow",
             "linkshell name does not match"
         );
-        println!("{:?}", lodestone_linkshell)
+        println!("{}", lodestone_linkshell.to_string())
     }
 }

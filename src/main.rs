@@ -1,11 +1,14 @@
 #[macro_use]
 extern crate derive_builder;
 
-use crate::api::profile::profile::get_profile_by_id;
+use crate::api::endpoints::{
+    profile::profile::*,
+    freecompany::freecompany::*,
+    linkshell::linkshell::*
+};
+
 use actix_web::{App, HttpServer};
 use tokio::join;
-use api::freecompany::profile::get_free_company_by_id;
-use api::linkshell::linkshell::get_linkshell_by_id;
 
 mod api;
 mod lodestone;

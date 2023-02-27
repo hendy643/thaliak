@@ -8,6 +8,10 @@ on:
 
 env:
   CARGO_TERM_COLOR: always
+  THALIAK_TOKEN: ${{ secrets.THALIAK_TOKEN }}
+  THALIAK_APP_ID: ${{ secrets.THALIAK_APP_ID }}
+  THALIAK_OWNER_ID: ${{ secrets.THALIAK_OWNER_ID }}
+  THALIAK_OWNER_GUILD_ID: ${{ secrets.THALIAK_OWNER_GUILD_ID }}
 
 jobs:
   build:
